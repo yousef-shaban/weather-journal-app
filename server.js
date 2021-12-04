@@ -33,7 +33,7 @@ app.listen(port, listining)
 
 app.get("/weatherData", (req, res)=>
 {
-    res.send(projectData)
+    res.send(projectData[ projectData.length  - 1 ])
 });
 
 app.post("/addData", (req, res)=>
