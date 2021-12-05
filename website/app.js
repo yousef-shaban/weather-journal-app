@@ -6,13 +6,14 @@ const tempHolder = document.getElementById("temp");
 const contHolder = document.getElementById("content");
 const nameHolder = document.getElementById("name");
 const descHolder = document.getElementById("desc");
+const resultBox = document.getElementById("result");
 
 
 let WeatherData = {}
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getDate()+'.'+ d.getMonth()+'.'+ d.getFullYear();
 
 // event listener for click on the generate 'button' to triger the 'preform' func
 Gen.addEventListener('click', preform)
@@ -32,6 +33,9 @@ function preform(){
         updataUI(); // get the data and the userInput from the server to use them to update the UI
     })
 }
+
+
+
 
 
 // get the data form the api
@@ -90,15 +94,22 @@ const updataUI = async () => {
         let Userdesc = FinalData.userRes;
         let desc = FinalData.desc;
         let name = FinalData.name;
-        nameHolder.innerHTML = `The country Name is ${name}`
-        dateHolder.innerHTML = `The Date is: ${date}`
-        tempHolder.innerHTML = `The Tempreture is ${temp}`
-        descHolder.innerHTML = `Description: ${desc}`
+        nameHolder.innerHTML = `${name}`
+        dateHolder.innerHTML = `${date}`
+        tempHolder.innerHTML = `${temp}`
+        descHolder.innerHTML = `${desc}`
         contHolder.innerHTML = Userdesc;
+        makeVisible(resultBox)
     }
     catch(error)
     {
         console.log(error)
     }
     
+}
+
+// make the result box appear
+const makeVisible = (selector)=>
+{
+    selector.classList.add("visible");
 }

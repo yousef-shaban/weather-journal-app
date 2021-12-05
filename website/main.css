@@ -1,0 +1,163 @@
+/* global */
+*
+{
+    box-sizing: border-box;
+    
+}
+body
+{
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #c3f5ff;
+}
+a{
+    text-decoration: none;
+}
+ul
+{
+    list-style: none;
+}
+
+.visible
+{
+    display: flex !important
+}
+/* end global */
+
+/* medias */
+@media(max-width:767px)
+{
+    .container
+    {
+        width: 750px;
+    }
+}
+
+
+/* header */
+.header
+{
+    min-height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: #00768E;
+}
+.header span
+{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 10px;
+    display: block;
+    color: white;
+}
+/* end header */
+
+/* start main */
+.main
+{
+    min-height: 250px;
+}
+.main .container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin-top: 18px;
+}
+.main .zip
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+.main .zip label
+{
+    padding: 10px 10px;
+    color: #444;
+
+}
+.main .zip label:last-of-type
+{
+    margin-top: 20px;
+}
+.main .zip input,.main .zip textarea:focus
+{
+    outline: none;
+}
+.main .zip input,.main .zip textarea
+{
+    background-color: #defaff;
+}
+textarea
+{
+    max-height: 100px;
+    max-width: 100%;
+}
+#zip
+{
+    padding: 10px;
+    border-radius: 5px;
+}
+.main .zip button
+{
+    margin-top: 15px;
+    background-color: #0093b1;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.result
+{
+    width: 600px;
+    min-height: 250px;
+    background-color: #33A4B6;
+    display: none;
+    justify-content: space-between;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.result > div
+{
+    padding: 20px;
+    color: white;
+}
+.right-side
+{
+    width: 50%;
+}
+.result #name
+{
+    font-size: 40px;
+    padding-bottom: 5px;
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+#temp
+{
+    font-size: 60px;
+    margin-top: 30%;
+    text-align: center;
+
+}
+.result div
+{
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#desc
+{
+    margin-top: 20px;
+}
+
+#content
+{
+    font-size: 30px;
+    overflow-wrap:break-word;
+    text-align: center;
+}
