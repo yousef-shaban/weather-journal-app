@@ -7,6 +7,7 @@ const contHolder = document.getElementById("content");
 const nameHolder = document.getElementById("name");
 const descHolder = document.getElementById("desc");
 const resultBox = document.getElementById("result");
+let newTemp;
 
 
 let WeatherData = {}
@@ -96,9 +97,10 @@ const updataUI = async () => {
         let name = FinalData.name;
         nameHolder.innerHTML = `${name}`
         dateHolder.innerHTML = `${date}`
-        tempHolder.innerHTML = `${temp}`
+        tempHolder.innerHTML = `${Math.round(temp)}`
         descHolder.innerHTML = `${desc}`
         contHolder.innerHTML = Userdesc;
+        newTemp = temp;
         makeVisible(resultBox)
     }
     catch(error)
@@ -113,3 +115,25 @@ const makeVisible = (selector)=>
 {
     selector.classList.add("visible");
 }
+const tempSwitch = document.getElementById("switch");
+
+let C ;
+tempSwitch.addEventListener("click", ()=>{ 
+
+    if(C === true)
+    {
+        
+            tempHolder.innerHTML = Math.round(newTemp); 
+            C = false;
+            tempSwitch.innerHTML = "C"
+        
+    }else{
+        
+            tempHolder.innerHTML = Math.round(273.15 - newTemp);
+            C = true;
+            tempSwitch.innerHTML = "K"
+        
+    }
+})
+
+

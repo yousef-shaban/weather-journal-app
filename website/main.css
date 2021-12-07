@@ -28,7 +28,8 @@ ul
 {
     .container
     {
-        width: 750px;
+        margin: 0 auto;
+        max-width: 750px;
     }
 }
 
@@ -160,4 +161,18 @@ textarea
     font-size: 30px;
     overflow-wrap:break-word;
     text-align: center;
+}
+#switch
+{
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-left: 50%;
+    transform: translatex(-50%);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    cursor: pointer;
+
 }
