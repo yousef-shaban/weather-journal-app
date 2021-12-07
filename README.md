@@ -1,10 +1,11 @@
 # Weather-Journal App Project
 
 ## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+This is an Web App That you enter the city zip code the and get the weather information in this city [temprature, wind speed, humidity]
 
 ## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+Enter the zip code in the input field and type your thoughts about the weather today and your description.
+a box will apprar below with all the information required.
 
 ## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+the app uses an api caled Weather API - OpenWeatherMap to get the information.
