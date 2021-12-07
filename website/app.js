@@ -6,7 +6,7 @@ const tempHolder = document.getElementById("temp");
 const contHolder = document.getElementById("content");
 const nameHolder = document.getElementById("name");
 const descHolder = document.getElementById("desc");
-const resultBox = document.getElementById("result");
+const resultBox = document.getElementById("entryHolder");
 let newTemp;
 
 
