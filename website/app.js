@@ -1,5 +1,5 @@
 /* Global Variables */
-const api = '760849b3c2e8c48e77e846d6f63b2be5'
+const api = '760849b3c2e8c48e77e846d6f63b2be5&units=imperial'
 const Gen = document.getElementById('generate');
 const dateHolder = document.getElementById("date");
 const tempHolder = document.getElementById("temp");
@@ -14,7 +14,7 @@ let WeatherData = {}
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getDate()+'.'+ d.getMonth()+'.'+ d.getFullYear();
+let newDate = d.getDate()+'.'+ (d.getMonth() + 1)+'.'+ d.getFullYear();
 
 // event listener for click on the generate 'button' to triger the 'preform' func
 Gen.addEventListener('click', preform)
@@ -129,9 +129,9 @@ tempSwitch.addEventListener("click", ()=>{
         
     }else{
         
-            tempHolder.innerHTML = Math.round(273.15 - newTemp);
+            tempHolder.innerHTML = Math.round( ( newTemp - 32) * (5/9));
             C = true;
-            tempSwitch.innerHTML = "K"
+            tempSwitch.innerHTML = "F"
         
     }
 })
